@@ -4,7 +4,6 @@ from flask import url_for
 from flask import render_template
 from flask import request
 from flask import session
-from flask_ngrok import run_with_ngrok
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import mysql.connector
@@ -16,7 +15,6 @@ import random
 import pyautogui as p
 import pywhatkit as py
 app=Flask(__name__)
-run_with_ngrok(app)
 
 @app.route("/home",methods=["POST","GET"])
 def home():
@@ -138,5 +136,4 @@ def login():
 def page():
     return f'<h1>{fee}</h1>'
 if __name__=="__main__":
-    #app.run(debug=True,port=5000, host='0.0.0.0')
-    app.run()
+    app.run(debug=True,port=5000, host='0.0.0.0') 
