@@ -39,7 +39,7 @@ def home():
            global e
            e=toaddr
            if(b != '' and c != ''and d != ''and e != ''):
-             mydb=mysql.connector.connect(host="localhost",password="mysql123456",database="car_rent",port="3306",user="root",auth_plugin='mysql_native_password')
+             mydb=mysql.connector.connect(host="localhost",password="***********",database="car_rent",port="3306",user="root",auth_plugin='mysql_native_password')
              c=mydb.cursor()
              kpo="insert into travels(eid,name,pho,f_addr,t_addr) values(1,%s,%s,%s,%s)"
              klp=(user,phone,fromaddr,toaddr)
